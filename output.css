@@ -766,6 +766,18 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-\[\] {
+    width: ;
+  }
+
+  .sm\:w-\[22re\2c \] {
+    width: 22re,;
+  }
+
+  .sm\:w-\[22rem\] {
+    width: 22rem;
+  }
+
   .sm\:align-top {
     vertical-align: top;
   }
