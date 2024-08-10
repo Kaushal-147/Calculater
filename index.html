@@ -6,24 +6,56 @@
     <link rel="shortcut icon" href="./images/calculater.png" type="image/x-icon">
     <link href="./output.css" rel="stylesheet">
     <title>Calculater</title>
+   
 </head>
-<body class="bg-gradient-to-tr from-[#a7bdc0de] to-[#55909f] min-h-screen justify-center flex align-middle">
+<body class="bg-gradient-to-tr from-[#a7bdc0de] to-[#55909f] min-h-screen box-border flex items-center justify-center">
 
-    <div class="bg-white rounded-sm h-[80%]">
+    <div class="bg-white rounded-lg h-[80%] flex flex-col justify-center items-center w-[26%]">
 
-        <div class="">
+        <div class="h-[9rem] justify-center flex p-[0.7rem] w-[100%] pt-[1.7rem]">
             <!-------------------Display-------------------------->
+            <input type="text" name="display" id="display" class="text-[2rem] flex items-end pr-[7%] p-[1px] text-right outline-none bg-slate-200 rounded-lg w-[90%]" >
         </div>
 
-        
-        <div class="flex flex-row">
+        <div class=" space-y-[0.1rem] pb-[0.8rem] pt-[0.2rem]">        
+            <div class="flex flex-row p-[0.5rem] justify-between space-x-[1.5rem] ">
             <!-------------------Numpad--------------------------->
-            <button>AC</button>
-            <button><img src="./images/backspace.png" class=""></button>
-            <button></button>
-            <button></button>
+                <button class="btn" onclick="display.value = ' '">AC</button>
+                <button class="h-[4rem] w-[4rem] hover:bg-slate-200 rounded-md pt-[0.3rem] pl-[0.25rem] active:bg-slate-300 bg-slate-300" onclick="display.value = display.value.toString().slice(0,-1)"><img src="./images/backspace.png" class="h-[90%] w-[85%]" ></button>
+                <button class="btn" onclick="display.value += '.'">.</button>
+                <button class="btn" onclick="display.value += ' / '">/</button>
+            </div> 
+            <div class="flex flex-row p-[0.5rem] justify-between space-x-[1.5rem]">
+            <!-------------------Numpad--------------------------->
+                <button class="btn" onclick="display.value += '7'" >7</button>
+                <button class="btn" onclick="display.value += '8'">8</button>
+                <button class="btn" onclick="display.value += '9'">9</button>
+                <button class="btn" onclick="display.value += ' * '">*</button>
+            </div>  
+            <div class="flex flex-row p-[0.5rem] justify-between space-x-[1.5rem]">
+            <!-------------------Numpad--------------------------->
+                <button class="btn" onclick="display.value += '4'">4</button>
+                <button class="btn" onclick="display.value += '5'">5</button>
+                <button class="btn" onclick="display.value += '6'">6</button>
+                <button class="btn" onclick="display.value += ' - '">-</button>
+            </div>
+            <div class="flex flex-row p-[0.5rem] justify-between space-x-[1.5rem]">
+            <!-------------------Numpad--------------------------->
+                <button class="btn" onclick="display.value += '1'">1</button>
+                <button class="btn" onclick="display.value += '2'">2</button>
+                <button class="btn" onclick="display.value += '3'">3</button>
+                <button class="btn" onclick="display.value += ' + '">+</button>
+            </div>
+            <div class="flex flex-row p-[0.5rem] justify-between space-x-[1.5rem]">
+            <!-------------------Numpad--------------------------->
+                <button class="btn" onclick="display.value += '00'">00</button>
+                <button class="btn" onclick="display.value += '0'">0</button>
+                <button class="btn" onclick="display.value += ' % '">%</button>
+                <button class="btn" onclick="display.value = eval(display.value)">=</button>
+            </div>
         </div>  
-        
+
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
