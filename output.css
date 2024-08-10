@@ -605,8 +605,8 @@ video {
   width: 100%;
 }
 
-.w-\[26\%\] {
-  width: 26%;
+.w-\[10rem\] {
+  width: 10rem;
 }
 
 .w-\[4rem\] {
@@ -619,6 +619,18 @@ video {
 
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-\[rem\] {
+  width: rem;
+}
+
+.w-\[20rem\] {
+  width: 20rem;
+}
+
+.w-\[24rem\] {
+  width: 24rem;
 }
 
 .flex-row {
